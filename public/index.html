@@ -18,6 +18,17 @@
         text-decoration: none;
         color: inherit; /* Or specify a color like: color: black; */
       }
+      .bg-lightgreen {
+        
+        background-color: lightgreen;
+      }
+      .text-white {
+        color: aliceblue;
+      }
+
+      a:hover {
+        background-color: ;
+      }
   </style>
 </head>
 
@@ -25,61 +36,37 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <a class="navbar-brand" href="#">
-        
+      <!-- Logo on the left -->
+      <a class="navbar-brand fs-5 fw-bold  p-2" href="#">
         Tourney
       </a>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <!-- Sign Up Button (Modal Trigger) -->
-          <a href="" class="me-2 no-underline" 
-            data-bs-target="#">
-            Home
-        </a>
-        </li>
-        <li class="nav-item">
-          <!-- Sign In Button (Modal Trigger) -->
-          <a href="#our-services" class="me-2 no-underline"
-            data-bs-target="#our-services">
-            Our Services
-        </a>
-        </li>
-        <li class="nav-item">
-          <!-- Sign In Button (Modal Trigger) -->
-          <a href="#my-team" class="me-2 no-underline" 
-            data-bs-target="#my-team">
-            Team Members
-        </a>
-        </li>
-        <li class="nav-item">
-          <!-- Sign In Button (Modal Trigger) -->
-          <a href="#reach-us" class="me-2 no-underline" 
-            data-bs-target="#reach-us">
-            Reach US
-        </a>
-        </li>
-      </ul>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
+  
+      <!-- Centered Navbar Tabs (Links) -->
+      <div class="mx-auto">
+        <ul class="navbar-nav d-flex justify-content-center">
           <li class="nav-item">
-            <!-- Sign Up Button (Modal Trigger) -->
-            <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal"
-              data-bs-target="#signUpModal">
-              Sign Up
-            </button>
+            <a href="#" class="nav-link text-decoration-none">Home</a>
           </li>
           <li class="nav-item">
-            <!-- Sign In Button (Modal Trigger) -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signInModal">
-              Sign In
-            </button>
+            <a href="#our-services" class="nav-link text-decoration-none">Our Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="#my-team" class="nav-link text-decoration-none">Team Members</a>
+          </li>
+          <li class="nav-item">
+            <a href="#reach-us" class="nav-link text-decoration-none">Reach Us</a>
           </li>
         </ul>
+      </div>
+  
+      <!-- Buttons aligned to the right -->
+      <div class="d-flex">
+        <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#signUpModal">
+          Sign Up
+        </button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signInModal">
+          Sign In
+        </button>
       </div>
     </div>
   </nav>
