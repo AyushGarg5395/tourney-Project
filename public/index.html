@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar with Sign Up and Sign In Modals</title>
+  <!-- Bootstrap CSS (Bootstrap 5) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="/script/index.js"></script>
+  <style>
+    .no-underline {
+        text-decoration: none;
+        color: inherit; /* Or specify a color like: color: black; */
+      }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        
+        Tourney
+      </a>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <!-- Sign Up Button (Modal Trigger) -->
+          <a href="" class="me-2 no-underline" 
+            data-bs-target="#">
+            Home
+        </a>
+        </li>
+        <li class="nav-item">
+          <!-- Sign In Button (Modal Trigger) -->
+          <a href="#our-services" class="me-2 no-underline"
+            data-bs-target="#our-services">
+            Our Services
+        </a>
+        </li>
+        <li class="nav-item">
+          <!-- Sign In Button (Modal Trigger) -->
+          <a href="#my-team" class="me-2 no-underline" 
+            data-bs-target="#my-team">
+            Team Members
+        </a>
+        </li>
+        <li class="nav-item">
+          <!-- Sign In Button (Modal Trigger) -->
+          <a href="#reach-us" class="me-2 no-underline" 
+            data-bs-target="#reach-us">
+            Reach US
+        </a>
+        </li>
+      </ul>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <!-- Sign Up Button (Modal Trigger) -->
+            <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal"
+              data-bs-target="#signUpModal">
+              Sign Up
+            </button>
+          </li>
+          <li class="nav-item">
+            <!-- Sign In Button (Modal Trigger) -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signInModal">
+              Sign In
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar ends here  -->
+
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/pics/img.png" class="d-block w-100 img-fluid" style="max-height: 300px;" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/pics/img.png"  class="d-block w-100 img-fluid" style="max-height: 300px;" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/pics/img.png"  class="d-block w-100 img-fluid" style="max-height: 300px;" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="text-center bg-primary p-2 fw-bold fs-2" id="our-services">
+    Our services
+  </div>
+
+  <div class="container mt-5 mb-5">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card 1 Image">
+          <div class="card-body">
+            <h5 class="card-title">Card Title 1</h5>
+            <p class="card-text">"Easily post and manage your own tournaments on our platform."</p>
+            <a href="/dashOrganizer" class="btn btn-primary">Publish Tournament</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card 2 Image">
+          <div class="card-body">
+            <h5 class="card-title">Card Title 2</h5>
+            <p class="card-text">"Browse and discover upcoming tournaments based on your preferences."</p>
+            <a href="/publish-tounaments" class="btn btn-primary">Fetch Tournaments</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card 3 Image">
+          <div class="card-body">
+            <h5 class="card-title">Card Title 3</h5>
+            <p class="card-text">This is a description for the third card. It's brief and informative.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card 4 Image">
+          <div class="card-body">
+            <h5 class="card-title">Card Title 4</h5>
+            <p class="card-text">This is a description for the fourth card. It's brief and informative.</p>
+            <a href="#" class="btn btn-primary">Earn Certification</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- My Team -->
+  <div class="text-center bg-primary p-2 fw-bold fs-2" id="my-team">
+    My Team
+  </div>
+  <div class="container mt-5 mb-5">
+    <div class="row g-3 d-flex flex-row">
+      <!-- Card 1 -->
+      <div class="col-md-6">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Card 1 Image">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Card Title 1</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-6">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Card 2 Image">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Card Title 2</h5>
+                <p class="card-text">This is another wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer as well.</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 5 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- My Team -->
+  <div class="text-center bg-primary p-2 fw-bold fs-2" id="reach-us">
+    Reach Us
+  </div>
+  <!-- Google Map Embed -->
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.167269148181!2d144.95592521531493!3d-37.81720987975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df44fb5e7%3A0x4e4a1dba5d355344!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1690156225863!5m2!1sen!2sau" 
+    width="600" 
+    height="450" 
+    style="border:0;" 
+    class="img-fluid"
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+
+  <!-- Sign Up Modal -->
+  <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <!-- Sign-up form content -->
+          <form method="post" enctype="multipart/form-data">
+
+            <!-- Sign-up email id  -->
+            <div class="mb-3">
+              <label for="txtEmail" class="form-label">Email Address</label>
+              <div class="input-group">
+                <span class="input-group-text" id="email-addon">
+                  <i class="fa-regular fa-envelope"></i>
+                </span>
+                <input type="email" name="txtEmail" class="form-control" id="txtEmail" placeholder="Enter Email"
+                  aria-describedby="email-addon">
+              </div>
+              <span class="" id="errEmail"></span>
+            </div>
+            <!-- Sign up email id ends here-->
+
+            <!-- Sign-up password  -->
+            <div class="mb-3">
+              <label for="txtPassword" class="form-label">Password</label>
+              <div class="input-group">
+                <span class="input-group-text" id="password-addon">
+                  <i class="fa-solid fa-lock"></i>
+                </span>
+                <input type="password" name="txtPassword" class="form-control" id="txtPassword" placeholder="Password"
+                  aria-describedby="password-addon">
+              </div>
+              <span class="text-danger" id="errPassword"></span>
+            </div>
+            <!-- Sign-up password ends here -->
+
+            <!-- Sign-up Confirm password  -->
+            <div class="mb-3">
+              <label for="txt-Confirm-password" class="form-label">Confirm Password</label>
+              <div class="input-group">
+                <span class="input-group-text" id="password-addon">
+                  <i class="fa-solid fa-lock"></i>
+                </span>
+                <input type="password" class="form-control" name="txt-Confirm-password" id="txt-Confirm-password"
+                  placeholder="Confirm Password" aria-describedby="password-addon">
+              </div>
+              <span class="text-danger" id="confirmPasswordError"></span>
+            </div>
+            <!-- Sign-up Confirm password ends here -->
+
+            <!-- User Type with Icon -->
+            <div class="mb-3">
+              <label for="userType" class="form-label">User Type</label>
+              <div class="input-group">
+                <span class="input-group-text">
+                  <i class="fa-solid fa-user"></i> <!-- User icon -->
+                </span>
+                <select class="form-select" name="userType" id="userType" aria-label="User Type">
+                  <option selected>Select user type</option>
+                  <option value="admin">Admin</option>
+                  <option value="host">Host</option>
+                  <option value="player">Player</option>
+                </select>
+              </div>
+            </div>
+            <!-- User Type ends here -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="btnsignup" formaction="/signup">Sign Up</button>
+              <!-- <input type="submit" class="btn btn-primary" formaction="/signup"> -->
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign In Modal -->
+  <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Sign-in form content -->
+          <form method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="txtLoginEmail" class="form-label">Email address</label>
+              <div class="input-group">
+                <span class="input-group-text" id="signInEmail-addon">
+                  <i class="fa-regular fa-envelope"></i>
+                </span>
+                <input type="email" class="form-control" name="txtLoginEmail" id="txtLoginEmail"
+                  placeholder="Enter your Email" aria-describedby="signInEmail-addon">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="signInPassword" class="form-label">Password</label>
+              <div class="input-group">
+                <span class="input-group-text" id="signInPassword-addon">
+                  <i class="fa-solid fa-lock"></i>
+                </span>
+                <input type="password" class="form-control" name="txtLoginPassword" id="txtLoginPassword"
+                  placeholder="Password" aria-describedby="signInPassword-addon">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary" id="btnLoginUser" formaction="/login">Sign In</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <a href="/publish-tounaments">
+    post a tournament
+  </a>
+  <a href="/tournamentFinder">
+    <p>
+      Find a Tournament
+    </p>
+  </a>
+  <a href="/dashPlayer">
+    <p>
+      Player Profile
+    </p>
+  </a>
+
+  <!-- Bootstrap JS and Popper.js (Bootstrap 5) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Card Grid with Bootstrap</title>
+    <meta name="description" content="A responsive grid layout using Bootstrap 5 cards for showcasing content.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container p-4">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/100" class="card-img-top img-fluid p-2" alt="Sample image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Go to Your Profile</h5>
+                        <p class="card-text small">"Manage your tournaments effortlessly—update your organizer profile to reflect your achievements and events!"</p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-center">
+                        <a href="/profilePlayer"><button type="submit" class="btn btn-outline-primary">Profile</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/100" class="card-img-top img-fluid p-2" alt="Sample image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Are You Ready to Post a Tounament</h5>
+                        <p class="card-text small">"Ready to bring your competition to life? Post your tournament now and let the games begin!"</p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-center">
+                        <a href="/tournamentFinder"><button type="submit" class="btn btn-outline-primary">Find Tournament</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/100" class="card-img-top img-fluid p-2" alt="Sample image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Settings</h5>
+                        <p class="card-text small">"Customize your tournament experience—adjust settings to fit your needs and preferences!"</p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-center">
+                        <button type="button" class="btn btn-outline-primary">Settings</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://via.placeholder.com/100" class="card-img-top img-fluid p-2" alt="Sample image">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Logout </h5>
+                        <p class="card-text small">Ready to take a break? Click here to log out and return whenever you're ready!"</p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-center">
+                        <button type="button" class="btn btn-outline-primary">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

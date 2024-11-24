@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+    <div class="container">
+        <form class="row g-3 bg-light p-4 rounded shadow-sm" method="post" enctype="multipart/form-data">
+            <h4 class="d-flex justify-content-center">Publish Tournament</h4>
+            <div class="col-md-9 d-flex align-items-end">
+                <div class="w-100 me-2">
+                    <label for="inputEmail4" class="form-label">Email(NGO,Organizer)</label>
+                    <input type="email" class="form-control" id="txtMail" name="txtMail">
+                </div>
+                <button type="button" class="btn btn-primary" id="searchOrg" formaction="/fetch-data">Search</button>
+            </div>
+            <div class="row mt-3" >
+                <div class="col-3">
+                    <label for="tourGame" class="form-label">Game</label>
+                    <input type="text" class="form-control" id="tourGame" name="tourGame" placeholder="Enter Game">
+                </div>
+                <div class="col-6">
+                    <label for="tourTitle" class="form-label">Title</label>
+                    <input type="text" class="form-control" name="tourTitle" id="tourTitle"
+                        placeholder="Enter Title or Event Name">
+                </div>
+                <div class="col-3">
+                    <label for="entryFees" class="form-label">Entry Fees</label>
+                    <input type="text" class="form-control" name="entryFees" id="entryFees"
+                        placeholder="Enter Fees Payment">
+                </div>
+            </div>
+            <div class="col-3">
+                <label for="tourDate" class="form-label">Date</label>
+                <input type="date" class="form-control" id="tourDate" name="tourDate" placeholder="Enter Address">
+            </div>
+            <div class="col-md-3">
+                <label for="tourCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="tourCity" name="tourCity">
+            </div>
+            <div class="col-md-3">
+                <label for="tourZip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="tourZip" name="tourZip">
+            </div>
+            <div class="col-md-6">
+                <label for="inputLocation" class="form-label">Location</label>
+                <input type="text" class="form-control" id="inputLocation" name="inputLocation">
+                
+            </div>
+            
+            <div class="col-4">
+                <label for="tourPoster" class="form-label">Select Poster</label>
+                <input class="form-control" type="file" id="tourPoster" name="tourPoster"
+                    onchange="preview()" multiple>
+            </div>
+            <div class="row d-flex  d-flex  align-items-center">
+                <div class="col-6 mt-1">
+                    <label for="tourPrizes" class="form-label">Prizes</label>
+                    <textarea class="form-control" id="tourPrizes" name="tourPrizes"
+                        rows="3"></textarea>
+                </div>
+                
+                <div class="col-md-3 d-flex justify-content-center mt-4">
+                    <img src="" id="prev" alt="img-poster" width="100" height="120">
+                </div>
+                
+            </div>
+            <div class="row d-flex">
+                
+                <div class="col-12">
+                    <label for="tourInfo" class="form-label">Other Info</label>
+                    <textarea class="form-control" id="tourInfo" name="tourInfo"
+                        rows="3"></textarea>
+                </div>
+            </div>
+            
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary" formaction="/posted-event">Save</button>
+                
+            </div>
+        </form>
+    </div>
+    <script>
+        function preview() {
+            const previewImage = document.getElementById('prev');
+            const fileInput = document.getElementById('tourPoster');
+            const file = fileInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    previewImage.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+        </script>
+        
+</body>
+</html>
