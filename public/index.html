@@ -29,6 +29,45 @@
       a:hover {
         background-color: aliceblue;
       }
+      .card-custom {
+        height: 230px;
+        width: 280px;
+        padding: 0.75rem; /* Reduce padding */
+      }
+      .three-dots {
+        cursor: pointer;
+      }
+      .card-body {
+        padding: 0.5rem; /* Reduce padding inside card body */
+      }
+      .three-dots {
+        font-size: 1.25rem; /* Adjust size if needed */
+      }
+      .card1-bgcolor {
+        background: #613c75;
+      }
+      .card2-bgcolor {
+        background: #536273;
+      }
+      .card3-bgcolor {
+        background: #a38d8d;
+      }
+      .card4-bgcolor {
+        background: #80a49b;
+      }
+      .card-myteam-title {
+        background: #ddb4ff;
+      }
+      .card-myteam-card1 {
+        background: #fdb9f4;
+      }
+      .card-myteam-card2 {
+        background: #ffd262;
+      }
+
+      .text-color-silver {
+        color: silver;
+      }
   </style>
 </head>
 
@@ -72,7 +111,15 @@
   </nav>
   <!-- navbar ends here  -->
 
-  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <section class="d-flex  justify-content-center mt-5" style="height: 60vh;">
+    <div class="text-center p-5 rounded-3 " style="max-width: 800px;">
+      <h3 class="fw-semibold mb-4 display-3" >Step into the Arena with Tourney!</h3>
+      <p class="mb-4 fs-6 text-center mx-auto " style="max-width: 500px;">Your journey to greatness begins here. Compete with the best, showcase your skills, and seize the rewards. Join us for an unforgettable tournament experience!</p>
+      <a href="#register" class="btn btn-primary btn-lg rounded-pill px-5">Register Now</a>
+    </div>
+  </section>
+
+  <!-- <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="/pics/img.png" class="d-block w-100 img-fluid" style="max-height: 300px;" alt="...">
@@ -92,96 +139,127 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
-  </div>
+  </div> -->
 
-  <div class="text-center bg-primary p-2 fw-bold fs-2" id="our-services">
+  <!-- <div class="text-center bg-primary p-2 fw-bold fs-2" id="our-services">
     Our services
-  </div>
+  </div> -->
 
-  <div class="container mt-5 mb-5">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+  <div class="container my-5">
+    <div class="row g-1">
       <!-- Card 1 -->
-      <div class="col">
-        <div class="card">
-          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card 1 Image">
+      <div class="col-md-3">
+        <div class="card card-custom shadow-sm rounded card1-bgcolor">
           <div class="card-body">
-            <h5 class="card-title">Card Title 1</h5>
-            <p class="card-text">"Easily post and manage your own tournaments on our platform."</p>
-            <a href="/dashOrganizer" class="btn btn-primary">Publish Tournament</a>
+            <div class="d-flex justify-content-between align-items-start">
+              <h5 class="mb-0 fs-4 me-5 text-white">"Explore and join exciting events!"</h5>
+              <div class="three-dots text-muted">
+                <i class="bi bi-three-dots-vertical text-white"></i>
+              </div>
+            </div>
+            <!-- <p class="mb-0 mt-2 me-4">Share results, highlights, and rankings to keep the excitement alive!</p> -->
           </div>
         </div>
       </div>
       <!-- Card 2 -->
-      <div class="col">
-        <div class="card">
-          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card 2 Image">
+      <div class="col-md-3">
+        <div class="card card-custom shadow-sm rounded card2-bgcolor text-white">
           <div class="card-body">
-            <h5 class="card-title">Card Title 2</h5>
-            <p class="card-text">"Browse and discover upcoming tournaments based on your preferences."</p>
-            <a href="/publish-tounaments" class="btn btn-primary">Fetch Tournaments</a>
+            <div class="d-flex justify-content-between align-items-start">
+              <h5 class="mb-0 fs-4 me-5">Share and showcase results!</h5>
+              <div class="three-dots text-muted">
+                <i class="bi bi-three-dots-vertical text-white"></i>
+              </div>
+            </div>
+            <!-- <p class="mb-0 mt-2 me-4">Share results, highlights, and rankings to keep the excitement alive!</p> -->
           </div>
         </div>
       </div>
       <!-- Card 3 -->
-      <div class="col">
-        <div class="card">
-          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card 3 Image">
+      <div class="col-md-3">
+        <div class="card card-custom shadow-sm rounded card3-bgcolor">
           <div class="card-body">
-            <h5 class="card-title">Card Title 3</h5>
-            <p class="card-text">This is a description for the third card. It's brief and informative.</p>
-            <a href="#" class="btn btn-primary">Learn More</a>
+            <div class="d-flex justify-content-between align-items-start">
+              <h5 class="mb-0 fs-4 me-5 text-white">Compete, win, and claim rewards!</h5>
+              <div class="three-dots text-muted">
+                <i class="bi bi-three-dots-vertical text-white"></i>
+              </div>
+            </div>
+            <!-- <p class="mb-0 mt-2 me-4">Share results, highlights, and rankings to keep the excitement alive!</p> -->
           </div>
         </div>
       </div>
       <!-- Card 4 -->
-      <div class="col">
-        <div class="card">
-          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card 4 Image">
+      <div class="col-md-3">
+        <div class="card card-custom shadow-sm rounded card4-bgcolor">
           <div class="card-body">
-            <h5 class="card-title">Card Title 4</h5>
-            <p class="card-text">This is a description for the fourth card. It's brief and informative.</p>
-            <a href="#" class="btn btn-primary">Earn Certification</a>
+            <div class="d-flex justify-content-between align-items-start">
+              <h5 class="mb-0 fs-4 me-5">Earn, validate, and showcase achievements!</h5>
+              <div class="three-dots text-muted">
+                <i class="bi bi-three-dots-vertical"></i>
+              </div>
+            </div>
+            <!-- <p class="mb-0 mt-2 me-4">Share results, highlights, and rankings to keep the excitement alive!</p> -->
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- My Team -->
-  <div class="text-center bg-primary p-2 fw-bold fs-2" id="my-team">
-    My Team
+  <!-- text between my team and hero section -->
+  <div class="container">
+    <div class=" p-2  fs-2 w-50" id="my-team">
+      <b>"Step into the arena where champions are made and legends are born.</b> <span class="text-color-silver ">Your journey to glory starts here—are you ready to rise?"</span>
+    </div>
   </div>
+
+  <!-- My Team -->
+  
   <div class="container mt-5 mb-5">
-    <div class="row g-3 d-flex flex-row">
-      <!-- Card 1 -->
-      <div class="col-md-6">
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Card 1 Image">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Card Title 1</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
+    <div class="row g-3">
+      <!-- Card 1 (Top Row, No Image) -->
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body p-5 card-myteam-title">
+            <h5 class="card-title w-75 fs-3 fw-bold">
+              Meet Our Dynamic Team
+            </h5>
+            <p class="card-text w-50">A skilled and passionate team of web developers turning ideas into reality by crafting innovative and dynamic digital experiences with dedication and precision.</p>
+            <p class="card-text"><small class="text-body-secondary">Last updated 2 mins ago</small></p>
           </div>
         </div>
       </div>
+    </div>
+    <div class="row g-3 mt-3">
       <!-- Card 2 -->
       <div class="col-md-6">
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
+        <div class="card h-100">
+          <div class="row g-0 card-myteam-card1 p-3">
             <div class="col-md-4">
               <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Card 2 Image">
             </div>
             <div class="col-md-8">
               <div class="card-body">
                 <h5 class="card-title">Card Title 2</h5>
-                <p class="card-text">This is another wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer as well.</p>
+                <p class="card-text">This is another card with an image and supporting text below as a natural lead-in to additional content.</p>
                 <p class="card-text"><small class="text-body-secondary">Last updated 5 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="row g-0 card-myteam-card2  p-3">
+            <div class="col-md-4">
+              <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Card 3 Image">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title p-2">Card Title 3</h5>
+                <p class="card-text">This card also has an image and some descriptive text to provide additional context and information.</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 10 mins ago</small></p>
               </div>
             </div>
           </div>
@@ -189,6 +267,8 @@
       </div>
     </div>
   </div>
+  
+  
   
 
   <!-- My Team -->
@@ -348,6 +428,7 @@
 
   <!-- Bootstrap JS and Popper.js (Bootstrap 5) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </body>
 
 </html>
