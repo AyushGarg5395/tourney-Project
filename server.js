@@ -192,7 +192,7 @@ app.get("/profilePlayer",function(req,resp) {
   resp.sendFile(path);
 })
 
-app.get("/publish-tounaments",function(req,resp) {
+app.get("/publish-tournaments",function(req,resp) {
   let path = __dirname + "/public/publish-tournaments.html";
   resp.sendFile(path);
 })
